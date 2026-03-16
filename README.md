@@ -33,6 +33,10 @@ CSV is a widespread open format for sharing but it presents limitations in terms
     </ul>
 </ul>
 
+## Project documentation
+
+- Changelog: [CHANGELOG.md](CHANGELOG.md)
+
 ## Tree Overview
 A brief description of files and folders of interests is made ## IN UPPERCASE
 ```text

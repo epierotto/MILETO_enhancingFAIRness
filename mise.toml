@@ -15,3 +15,15 @@ run = "uv run python app.py"
 [tasks.test]
 description = "Run tests via pytest and export JUnit"
 run = "mkdir -p reports && uv run pytest --color=yes --junit-xml=reports/unit_tests.xml"
+
+[tasks.lint]
+description = "Lint code and auto-fix issues"
+run = "uv run ruff check --fix . --config $(msai-standards get ruff.toml)"
+
+[tasks.format]
+description = "Format codebase with Ruff formatter"
+run = "uv run ruff format . --config $(msai-standards get ruff.toml)"
+
+[tasks.type-check]
+description = "Type-check codebase with MyPy"
+run = "uv run mypy . --config-file $(msai-standards get mypy.ini)"

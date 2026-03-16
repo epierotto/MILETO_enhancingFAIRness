@@ -1,5 +1,5 @@
 [tools]
-uv = "latest"
+uv = "0.10.9"
 
 [env]
 UV_PROJECT_ENVIRONMENT = ".venv"
@@ -13,5 +13,5 @@ description = "Run the app via uv"
 run = "uv run python app.py"
 
 [tasks.test]
-description = "Run unit tests via uv"
-run = "uv run python -m unittest"
+description = "Run tests via pytest and export JUnit"
+run = "mkdir -p reports && uv run pytest --color=yes --junit-xml=reports/unit_tests.xml"

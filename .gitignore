@@ -9,3 +9,6 @@ tests/conf.json
 data/output/
 tree.txt
 *.bas
+.DS_Store
+*.log
+*.egg-info/

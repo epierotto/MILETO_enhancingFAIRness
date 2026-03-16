@@ -1,0 +1,18 @@
+[tools]
+python = "3.11"
+uv = "latest"
+
+[env]
+UV_PROJECT_ENVIRONMENT = ".venv"
+
+[tasks.setup]
+description = "Create venv and install dependencies with uv"
+run = "uv sync --dev && uv run pre-commit install"
+
+[tasks.run]
+description = "Run the app via uv"
+run = "uv run python app.py"
+
+[tasks.test]
+description = "Run unit tests via uv"
+run = "uv run python -m unittest"

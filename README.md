@@ -103,15 +103,9 @@ git clone https://github.com/EtlcT/MILETO_enhancingFAIRness.git
 cd MILETO_EnhancingFAIRness
 ```
 
-### 2. Create and activate virtual environment
+### 2. Install dependencies (uv + mise)
 ```bash
-python -m venv venv
-
-# Windows
-.\venv\Scripts\activate
-
-# Linux / MacOS
-source venv/bin/activate
+mise setup
 ```
 
 ### 3. ⚠️Pre-requisites
@@ -165,16 +159,15 @@ Add to system environment variables path to:
 - Path\to\Graphiz\bin
 - Path\to\wkhtml\bin
 
-### 4. Install dependencies
+### 4. Running App.py
 
 ```bash
-pip install -r requirements.txt
+mise run
 ```
 
-### 5. Running App.py
-
+To check the Python version used by uv:
 ```bash
-python app.py
+uv run python --version
 ```
 
 ## Testing the app

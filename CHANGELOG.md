@@ -13,7 +13,7 @@ The format is based on Keep a Changelog and this project follows Semantic Versio
   - current/future user journeys,
   - product direction decision note,
   - onboarding MVP experiment plan.
-- Top-level `AGENT.md` for contributor and automation context.
+- Top-level `AGENTS.md` for contributor and automation context.
 - `mise` task entries for `lint`, `format`, and `type-check`.
 
 ### Changed

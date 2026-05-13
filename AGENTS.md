@@ -1,4 +1,4 @@
-# AGENT.md
+# AGENTS.md
 
 ## Project overview
 This repository contains “Enhancing FAIRness / Ss2db”, a Python app that converts a spreadsheet template (one sheet per table) into a documented SQLite database with metadata JSON and ERD + PDF documentation.

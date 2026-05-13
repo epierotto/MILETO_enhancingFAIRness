@@ -36,6 +36,7 @@ CSV is a widespread open format for sharing but it presents limitations in terms
 ## Project documentation
 
 - Changelog: [CHANGELOG.md](CHANGELOG.md)
+- Architecture Decision Records: [docs/adr/README.md](docs/adr/README.md)
 
 ## Tree Overview
 A brief description of files and folders of interests is made ## IN UPPERCASE
@@ -148,7 +149,7 @@ On Windows Graphiz need to be intalled manually and specific tools are required.
 2. Dowload and install Build Tools on <a href="https://visualstudio.microsoft.com/fr/visual-cpp-build-tools/">Microsoft.com</a>
 During install under "Desktop & Mobile" select "Desktop development in C++" as shown on the image below (in French 😿) 
 
-<img src="doc/VS Build Tool 2022 install.png"></img>
+<img src="docs/VS Build Tool 2022 install.png"></img>
 
 Then install PyGraphiz from command-line.
 ```PowerShell

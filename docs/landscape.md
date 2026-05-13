@@ -22,6 +22,18 @@ Most tools cover only one part of that workflow.
 | Data catalog / governance | CKAN, DataHub, Amundsen | Dataset discovery and governance at scale | Heavyweight for small teams; not optimized for local spreadsheet-to-database conversion workflows |
 | Scientific metadata tooling | Frictionless, DataCite integrations, domain repositories | Metadata schema validation and publication support | Often does not include relational SQLite creation + ERD + PDF generation as one local workflow |
 
+## Feature Comparison Snapshot
+
+Legend: `Yes` = core capability, `Partial` = possible with extra setup/plugins, `No` = generally out of scope.
+
+| Tool / category | Spreadsheet-first authoring | FAIR-oriented metadata output | SQLite output | ERD artifact | PDF technical documentation | Local-first workflow |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Ss2db (this project)** | Yes | Yes | Yes | Yes | Yes | Yes |
+| Frictionless (Python ecosystem) | Partial | Yes | Partial | No | No | Yes |
+| CKAN / Dataverse style platforms | Partial | Yes | No | No | Partial | No |
+| dbt / ETL platforms | No | Partial | Partial | Partial | No | Partial |
+| SchemaSpy / DB diagram tools | No | No | Partial | Yes | Partial | Yes |
+
 ## What This Project Is
 
 `Ss2db` is best understood as a **research-data packaging workflow** with a spreadsheet-first interface.

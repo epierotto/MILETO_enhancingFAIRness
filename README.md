@@ -37,6 +37,7 @@ CSV is a widespread open format for sharing but it presents limitations in terms
 
 - Changelog: [CHANGELOG.md](CHANGELOG.md)
 - Architecture Decision Records: [docs/adr/README.md](docs/adr/README.md)
+- Tooling landscape and project positioning: [docs/landscape.md](docs/landscape.md)
 
 ## Tree Overview
 A brief description of files and folders of interests is made ## IN UPPERCASE

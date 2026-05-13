@@ -2,6 +2,7 @@ import unittest
 import os
 import time
 import shutil
+import sqlite3
 from unittest.mock import MagicMock
 
 import pandas as pd
@@ -216,7 +217,19 @@ class TestDBCreate(unittest.TestCase):
         # check sqlite is modified
         self.assertGreater(first_modification_time, initial_modification_time)
 
-        # check ERD image is created
-        self.assertTrue(os.path.exists(erd_file_path))
+        conn = sqlite3.connect(db_file_path)
+        erd_blob = conn.execute(f"SELECT ERD FROM {DDICT_S} LIMIT 1").fetchone()[0]
+        conn.close()
+
+        dot_exists = shutil.which("dot") is not None
+
+        if dot_exists:
+            # check ERD image is created and blob is present
+            self.assertTrue(os.path.exists(erd_file_path))
+            self.assertIsNotNone(erd_blob)
+        else:
+            # no system graphviz available: ERD export is skipped
+            self.assertFalse(os.path.exists(erd_file_path))
+            self.assertIsNone(erd_blob)
 
         shutil.rmtree(output_path)

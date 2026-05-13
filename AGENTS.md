@@ -31,6 +31,7 @@ This repository contains “Enhancing FAIRness / Ss2db”, a Python app that con
 - Always work on a non-`main` branch for any change (code, docs, or config).
 - Keep `main` clean and use focused topic branches for PRs.
 - For every completed unit of work: commit changes, push the branch, and open a PR for review.
+- When merging PRs, use squash merges and delete the source branch after merge.
 
 ## Data and fixtures
 - `data/`: sample spreadsheets for testing and demos.

@@ -4,6 +4,10 @@ uv = "0.10.9"
 [env]
 UV_PROJECT_ENVIRONMENT = ".venv"
 
+[tasks.graphviz-check]
+description = "Verify Graphviz dot is available"
+run = "command -v dot >/dev/null && dot -V"
+
 [tasks.setup]
 description = "Create venv and install dependencies with uv"
 run = "uv sync --dev && uv run pre-commit install"

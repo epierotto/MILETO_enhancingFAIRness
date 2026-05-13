@@ -198,7 +198,7 @@ class sqliteCreate():
         
         return fk_statement
 
-    def create_ERD(self) -> bytes:
+    def create_ERD(self) -> bytes | None:
         """Create ERD schema, save it as svg
         and return it as a Blob
         """

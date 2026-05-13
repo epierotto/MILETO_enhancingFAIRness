@@ -5,6 +5,7 @@ which data is accessed by retrieve_data.py script
 """
 
 import os
+import shutil
 import pandas as pd
 import numpy as np
 import graphviz
@@ -22,7 +23,7 @@ class ERD_maker():
         self.db_name = db_name
         self.output_erd = os.path.normpath((output_dir + '/ERD_' + self.db_name))
 
-    def create_erd(self) -> bytes:
+    def create_erd(self) -> bytes | None:
         """Create a simple ERD with Entities, their attributes,
         information about Primary keys and Foreign Keys and relation
         between entities
@@ -30,6 +31,9 @@ class ERD_maker():
         Save the erd as svg and return it as Blob
 
         """
+
+        if shutil.which("dot") is None:
+            return None
 
         # instanciate a graph object with no duplicate edges
         erd = graphviz.Graph(comment=self.db_name, strict=True)
